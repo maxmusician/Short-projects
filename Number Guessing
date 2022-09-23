@@ -1,0 +1,18 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int iSecret, iGuess;
+    srand (time(NULL));
+    iSecret = rand() % 10 + 1;
+    do {
+        printf ("Enter any number: ");
+        scanf ("%d",&iGuess);
+        if (iSecret<iGuess) puts ("Too high");
+        else if (iSecret>iGuess) puts ("Too low!");
+    } while (iSecret!=iGuess);
+    puts ("You guessed it right!!");
+    return 0;
+}
